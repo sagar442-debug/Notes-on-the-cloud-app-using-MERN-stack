@@ -53,6 +53,10 @@ router.put('/updatenotes/:id',fetchuser,[
     body('title', 'Enter a valid title').isLength({min:3}),
     body('description', 'Description must be at least 5 characters.').isLength({min:5})
 ] ,async (req,res)=>{
+     const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
     const {title, description, tag} = req.body;
     // Create new note object
     const newNote = {};
