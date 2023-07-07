@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { unstable_HistoryRouter, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
     let history = useNavigate();

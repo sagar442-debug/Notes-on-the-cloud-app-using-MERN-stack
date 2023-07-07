@@ -6,7 +6,7 @@
  const port = 8000
  
  connectToMongo();
-
+ 
  app.use(cors())
  app.use(express.json())
 
