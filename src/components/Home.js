@@ -3,10 +3,10 @@ import Notes from './Notes';
 
 
 
-const Home = () => {
+const Home = ({showAlert}) => {
   return (
     <div>
-        <Notes/>
+        <Notes showAlert={showAlert}/>
     </div>
   )
 }
